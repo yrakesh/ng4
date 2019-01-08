@@ -1,3 +1,4 @@
+import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SummaryPipe } from './summary.pipe';
 import { CoursesService } from './courses.service';
@@ -15,6 +16,7 @@ import { CourseEnrollmentComponent } from './course-enrollment/course-enrollment
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 import { PasswordChangeComponent } from './password-change/password-change.component';
+import { PostsComponent } from './posts/posts.component';
 
 
 @NgModule({
@@ -29,12 +31,14 @@ import { PasswordChangeComponent } from './password-change/password-change.compo
     CourseEnrollmentComponent,
     SignupFormComponent,
     NewCourseFormComponent,
-    PasswordChangeComponent
+    PasswordChangeComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpModule
   ],
   providers: [
     CoursesService
